@@ -1,22 +1,18 @@
 n=int(input("Enter the no of terms in the sequence: "))
-def fibonacci(n):
-    a=0
-    b=1
-    count=0
-    if n<=0:
-        print("enter positive number")
-    elif n==1:
-        print("Fibonacci Sqeuence is: ",a)
-    else:
-        while count<n:
-            print(a)
-            temp=a+b
-            a=b
-            b=temp
-            count+=1
-fibonacci(n)
+a=0
+b=1
+if n<=0:
+    print("Enter postive number of terms: ")
+elif n==1:
+    print(a)
+else:
+    print(a,b,end=" ")
+    for i in range(2,n):
+        nxtterm=a+b
+        print(nxtterm,end=" ")
+        a=b
+        b=nxtterm
 
-        
     
 
         
