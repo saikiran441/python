@@ -1,0 +1,13 @@
+n=input("please enter a string: ") 
+def most_frequent(s):
+    s=s.lower()
+    s1={}
+    for i in s:
+        if i in s1:
+            s1[i]+=1
+        else:
+            s1[i]=1
+    s2=sorted(s1.items(),key=lambda x:x[1],reverse=True)
+    for i in s2:
+        print(i[0],"=",i[1])
+most_frequent(n)
